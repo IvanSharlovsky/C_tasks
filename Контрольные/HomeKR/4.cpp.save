@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+
+    int n = 0, i = 0;
+
+    scanf("%d ", &n);
+
+    char * p = (char*) malloc((N+2) * sizeof(char));
+
+    for (i = 0; i < n; i++)
+        p[i] = getchar();
+
+    p[n+1] = 0;
+    p[n+2] = '\0';
+
+    unsigned long int a = strlen(p);
+
+    printf("%lu",a);
+
+    free(p);
+}

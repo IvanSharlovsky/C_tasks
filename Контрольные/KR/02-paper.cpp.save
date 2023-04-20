@@ -1,0 +1,70 @@
+#include <stdio.h>
+
+int main()
+{
+    int M = 0, N = 0, a[10000] = {0}, h = 0;
+
+    scanf("%d %d", &M, &N);
+
+    for(int i = 0; i < N; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+
+    for(int i = 0; i < N; i++)
+    {
+        if(a[i] >= i + 1)
+        {
+            h++;
+        }
+        else
+        {
+            if(M >= i + 1 - a[i])
+            {
+                M = M - (i + 1 - a[i]);
+                h++;
+            }
+        }
+    }
+
+    printf("%d", h);
+}
+
+#include <stdio.h>
+
+int main()
+{
+    int M = 0, N = 0, a[100000] = {0}, c = 0;
+    
+    scanf("%d %d", &M, &N);
+
+    for(int i = 0; i < N; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    
+    for(int i = 0; i < N; i++)
+    {
+        if(mas[i] >= N)
+            c++;
+    }
+
+    for(int i = N; i > 0; i--)
+    {
+        int Y = 0; // недостоющее
+        
+        for(int j = 0; j < n; j++)
+        {
+            if(a[j] < n)
+            Y = Y + (n - a[j]);
+        }
+        
+        if(Y <= M)
+        {
+            printf("%d\n", i);
+            return 0;
+        }
+    }
+
+    return 0;
+}
